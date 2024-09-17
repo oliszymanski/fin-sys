@@ -2,6 +2,11 @@ from django.shortcuts import render, redirect
 from .models import Account, Transaction
 from django.contrib.auth.decorators import login_required
 
+def index( request ):
+    return render( request, 'index.html' )
+
+
+
 @login_required
 def account_details( request ):
     account_details_dict = {}
