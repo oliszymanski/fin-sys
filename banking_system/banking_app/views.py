@@ -17,7 +17,7 @@ def account_details( request ):
     account_details_dict['account'] = account
     account_details_dict['transactions'] = transactions
 
-    return render( request, 'banking_app/account_details.html', account_details_dict )
+    return render( request, 'account_details.html', account_details_dict )
 
 
 
@@ -35,7 +35,7 @@ def deposit( request ):
         
         return redirect( 'account_details' )
 
-    return render( request, 'banking_app/deposit.html' )
+    return render( request, 'deposit.html' )
 
 
 @login_required
@@ -51,6 +51,6 @@ def withdraw( request ):
             Transaction.objects.create( account=account, amount=amount, transaction_type='withdrawal' )
         
         else:
-            return render( request, 'banking_app/withdraw.html', { 'error':'Insifficient funds' } )
+            return render( request, 'withdraw.html', { 'error':'Insifficient funds' } )
 
-    return render( request, 'banking_app/withdraw.html' )
+    return render( request, 'withdraw.html' )
