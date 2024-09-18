@@ -7,5 +7,6 @@
         <li>{{ transaction.transaction_type }}: {{ transaction.amount }} on {{ transaction.created_at }}</li>
     {% endfor %}
 </ul>
+<a href="{% url 'index' %}">Home</a>
 <a href="{% url 'deposit' %}">Deposit</a>
 <a href="{% url 'withdraw' %}">Withdraw</a>
