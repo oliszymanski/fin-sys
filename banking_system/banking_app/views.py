@@ -6,7 +6,6 @@ from .forms import UserRegisterForm, UserLoginForm
 
 
 
-
 def index( request ):
     return render( request, 'index.html' )
 
