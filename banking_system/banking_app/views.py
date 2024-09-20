@@ -20,7 +20,9 @@ def register( request ):
             user = form.save()
             login( request, user )
 
-            return redirect( 'index' )
+            Account.objects.create( user=user )
+
+            return redirect( 'login' )
 
     else:
         form = UserRegisterForm()
