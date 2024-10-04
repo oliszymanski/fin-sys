@@ -1,0 +1,15 @@
+html, body {
+    font-family: sans-serif;
+}
+
+.section-left{
+    margin-right: 0;
+}
+
+.section-right{
+    float: right;
+}
+
+.section-left, .section-right{
+    margin-top: 10%;
+}

@@ -4,23 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prosent Bank</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/css/style_index.css' %}">
 </head>
 <body>
     <header>
         <h1>Welcome to Prosent!</h1>
         <p>How can we help with your money?</p>
-        <a href="{ % url '' % }"></a>
     </header>
     <main>
-        <p>This is the main page of the bank's website.</p>
-        <a href="{% url 'deposit' %}">Deposit</a>
-        <a href="{% url 'withdraw' %}">Withdraw</a>
-
-        <p>Login: <a href="{% url 'login' %}">login</a>
-        </p>
+        <p>Login: <a href="{% url 'login' %}">login</a></p>
         <p>Register: <a href="{% url 'register' %}">register</a></p>
-
     </main>
+
+    <div class="section-left">
+        <h2 class="section-title">Store your money securely</h2>
+    </div>
+
+    <div class="section-right">
+        <h2 class="section-title">Your account, your choice</h2>
+    </div>
+
+    <div class="section-left">
+        <h2 class="section-title">Send money easily and securely</h2>
+    </div>
+        
+    <div class="section-right">
+        <h2 class="section-title">Analyze your wallets with AI</h2>
+    </div>
+
     <footer>
         <p>&copy; 2024 Prosent Bank. All rights reserved.</p>
     </footer>
