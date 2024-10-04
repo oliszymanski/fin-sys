@@ -22,7 +22,7 @@ def register( request ):
 
             Account.objects.create( user=user )
 
-            return redirect( 'login' )
+            return redirect( 'account_details' )
 
     else:
         form = UserRegisterForm()
@@ -49,7 +49,6 @@ def user_login( request ):
         form = UserLoginForm()
     
     return render( request, 'login.html', { 'form' : form } )
-
 
 
 
